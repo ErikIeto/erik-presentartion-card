@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background:#1c1917;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    height: 60vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+    perspective: 1000;
+    position: relative;
+}
+
+.container .card {
+    width: 30vw;
+    height: 70vh;
+    background: #7f7c77;
+    transition: 0.9s;  	
+    transform-style: preserve-3d;    	
+    position: absolute;
+    top: -10%;
+    left: 30%;
+    border-radius: 5%;
+}
+
+.container .card img {
+    max-width: 448px;
+    max-height: 900px;
+}
+
+.container:hover .card {
+    transform: rotateY(180deg) translateX(20vw);
+    background-color: #7f7c77;
+}
+
+.container .card .front { 
+    margin-top: 60px;
+    
+}
+
+.container .card .back { 
+    transform: rotateY(180deg); 
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 40px;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+    padding-top: 0px;
+}
+
+.container .card .front, .back {  	
+    backface-visibility: hidden;    	
+    position: absolute;  	
+    top: 0;  	
+    left: 0;  
+}
+
+.container .card .back h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+
+}
+
+.container .card .back ul li {
+    
+    text-align: left;
+    font-size: 25px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.container .socialContainer {
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+  
+}
+
+.container:hover .socialContainer {
+    transform: translateX(20vw);
+    transition-delay: -.10s; 
+}
+
+.container .socialContainer h2 {
+    font-size: 38px;
+    color: white;
+    z-index: -1;
+}
+
+.container .socialContainer .social {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 10px;
+    z-index: -1;
+}
+
+.container .socialContainer .social a .fab{
+    text-decoration: none;
+    color: aliceblue;
+    
+    
+}
+.container .socialContainer .social a .fa{
+    text-decoration: none;
+    color: aliceblue;
+     
+    
+}
+.container .socialContainer .social .fa-linkedin:hover{
+    color: #0976b4;
+    cursor: pointer;
+}
+
+.container .socialContainer .social .fa-github:hover{
+    color: #A8A8A8;
+    cursor: pointer;
+}
+
+.container .socialContainer .social .fa-instagram:hover{
+    color: #D16E4F;
+    cursor: pointer;
+}
+
+.container .socialContainer .social .fa-facebook:hover{
+    color: #0976b4;
+    cursor: pointer;
+}
+
+.container .socialContainer .social .fa-behance:hover{
+    color: #633DFE;
+    cursor: pointer;
+}
+.container .socialContainer .social .fa-rocket:hover{
+    color: #BA55CF;
+    cursor: pointer;
+}
+
+
+
